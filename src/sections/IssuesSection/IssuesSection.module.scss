@@ -1,0 +1,503 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.wrapperIssues {
+  background-color: vars.$green-light;
+  flex-flow: column;
+  display: flex;
+}
+
+.issuesContent {
+  font-family: var(--font-primary);
+  text-align: center;
+  padding-top: 96px;;
+  padding-bottom: 40px;
+  @include spacing.horizontal-spacing(padding-left, spacing.$horizontal-spacing);
+  &{
+    @include spacing.horizontal-spacing(padding-right, spacing.$horizontal-spacing);
+  }
+}
+
+.issuesContentTitle {
+  color: vars.$pigment-green-dark;
+  padding-bottom: 24px;
+  font-weight: 800;
+  line-height: 117%;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 56px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 72px;
+  }
+}
+
+.issuesContentSubtitle {
+  font-family: var(--font-secondary);
+  color: vars.$eerie-black;
+  text-align: center;
+  padding-bottom: 24px;
+  font-weight: 800;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 20px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 28px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 32px;
+  }
+}
+
+.issuesContentText {
+  font-family: var(--font-secondary);
+  color: vars.$eerie-black-shade-70;
+  text-align: center;
+  font-weight: 500;
+  //line-height: 29.05px;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)){
+    font-size: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)){
+    font-size: 24px;
+  }
+}
+
+.galeryIssues {
+  padding-bottom: 96px;
+  @include spacing.horizontal-spacing(padding-left, spacing.$horizontal-spacing);
+  &{
+    @include spacing.horizontal-spacing(padding-right, spacing.$horizontal-spacing);
+  }
+}
+
+.rowIssues1 {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    flex-flow: column;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    flex-flow: row;
+  }
+
+}
+
+.galeryIssues1 {
+  border-radius: vars.$galery-issues-border-radius;
+  background-image: url(../../../public/images/galeryIssue1.png);
+  background-position: 50%;
+  background-size: cover;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: auto;
+    height: 400px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: auto;
+    height: 520px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 421.333px;
+    height: 568px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    width: 435.451px;
+    height: 568px;
+  }
+
+  .textWrapper {
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      padding: 34.09px 16px 0;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      padding: 34.09px 27.27px 0;
+    }
+  }
+}
+
+.galeryIssues2 {
+  border-radius: vars.$galery-issues-border-radius;
+  background-image: url(../../../public/images/galeryIssue2.png);
+  background-position: 50%;
+  background-size: cover;
+  align-items: flex-end;
+  width: 537.792px;
+  height: 482px;
+  padding-top: 86px;
+  display: flex;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: auto;
+    height: 400px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: 100%;
+    height: 480px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 100%;
+    height: 482px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    width: 537.7915649414062px;
+  }
+
+  .textWrapper {
+    padding-top: 34.09px;
+  }
+}
+
+.galeryIssues3 {
+  border-radius: vars.$galery-issues-border-radius;
+  background-image: url(../../../public/images/galeryIssue3.png);
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: 568px;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+    height: 520px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: 100%;
+    height: 520px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 421.333px;
+    height: 568px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    width: 551px;
+    height: 568px;
+  }
+
+  .textWrapper {
+    padding-top: 34.09px;
+  }
+}
+
+.galeryIssuesText {
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  font-weight: 800;
+  line-height: 100%;
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    margin-bottom: 0;
+    padding: 0 27.27px;
+    font-size: 32px;
+    display: flex;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 421.333px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 28px;
+  }
+
+}
+
+.card2Text {
+  padding-bottom: 47.72px;
+  line-height: 100%;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 32px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-left: 27.27px;
+    padding-right: 27.27px;
+    font-size: 48px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 40px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 40.9px;
+  }
+}
+
+.card3Text {
+  padding-top: 34.09px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 32px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-left: 27.27px;
+    padding-right: 27.27px;
+    font-size: 40px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 32px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 34.09px;
+  }
+}
+
+.galeryIssuesCard {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 24px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 40px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 28px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 32px;
+  }
+}
+
+/// 2nd Row
+
+.rowIssues2 {
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  justify-content: space-between;
+  display: flex;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-left: 43px;
+    padding-right: 43px;
+    flex-direction: row;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-left: 38.87px;
+    padding-right: 38.87px;
+  }
+
+  .issuesCard4 {
+    height: 444px;
+    border-radius: vars.$galery-issues-border-radius;
+    background-image: url(../../../public/images/galeryIssue4.jpeg);
+    background-position: 50%;
+    background-size: cover;
+    padding-left: 0;
+    align-items: flex-end;
+    display: flex;
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      width: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      width: 369px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+      width: 581.9386596679688px;
+    }
+  }
+
+  .issuesCard4TextWrapper {
+    font-family: var(--font-secondary);
+    font-weight: 800;
+    width: 581.9386596679688px;
+    color: vars.$white;
+    line-height: 100%;
+    display: flex;
+    align-items: end;
+    align-content: end;
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      padding-bottom: 0;
+
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      font-size: 36px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+      font-size: 40px;
+      padding-right: 175.94px;
+      line-height: 48.41px;
+    }
+  }
+
+  .issuesCard4Text {
+    padding-bottom: 56px;
+    line-height: 100%;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      padding-left: 16px;
+      font-size: 32px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      font-size: 40px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      padding-left: 32px;
+      font-size: 36px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+      padding-left: 32px;
+      font-size: 40px;
+    }
+
+  }
+
+  .issuesCard5 {
+    width: 100%;
+    height: 491px;
+    border-radius: vars.$galery-issues-border-radius;
+    background-image: url(../../../public/images/galeryIssue5.jpeg);
+
+    background-size: cover;
+    padding-left: 0;
+
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      background-position: 50%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      width: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+      background-position: 18%;
+      width: 395.3169250488281px;
+    }
+  }
+
+  .issuesCard5TextWrapper {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    line-height: 100%;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 24px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      padding-left: 32px;
+      padding-right: 32px;
+      font-size: 40px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      font-size: 24px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+
+      font-size: 24px;
+    }
+
+  }
+
+  .galeryIssuesText2 {
+    font-family: var(--font-secondary);
+    color: vars.$white;
+    font-weight: 800;
+  }
+
+  .issuesCard6 {
+    height: 544px;
+    border-radius: vars.$galery-issues-border-radius;
+    background-image: url(../../../public/images/galeryIssue6.png);
+    background-position: 50%;
+    background-size: cover;
+    padding-left: 0;
+    display: flex;
+    align-items: end;
+    align-content: end;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      width: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      width: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      width: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+      width: 473px;
+    }
+  }
+
+  .issuesCard6Text {
+    padding-bottom: 32px;
+
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 32px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      padding-left: 32px;
+      padding-right: 32px;
+      font-size: 40px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      font-size: 28px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+      font-size: 32px;
+    }
+  }
+}

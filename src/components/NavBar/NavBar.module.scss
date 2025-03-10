@@ -1,0 +1,131 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+/// navbar
+.navBar {
+  //padding-right: 3rem;
+  //padding-left: 3rem;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 1rem;
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  padding-bottom: 1rem;
+  align-items: center;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.navBarOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  flex: 0 auto;
+  align-items: center;
+}
+
+.navBarLink {
+  font-family: var(--font-secondary);
+  color: vars.$nav-bar-option-color;
+  font-size: 1rem;
+  line-height: 19.36px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.waMenuWrapper {
+  display: flex;
+  height: 3.5rem;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  background-color: vars.$pigment-green;
+  border-radius: vars.$btn-radius;
+}
+
+.sendWaBtn {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 12px;
+  line-height: 14.52px;
+  display: flex;
+}
+
+.wazzaText {
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  padding-right: 0;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 14.52px;
+}
+
+.waLog {
+  max-height: 20px;
+  max-width: 20%;
+  min-width: 0px;
+}
+
+.navBarWazzaOption {
+  border-radius: vars.$btn-radius;
+  background-color: vars.$pigment-green;
+  flex: 0 auto;
+  align-content: center;
+  cursor: pointer;
+  justify-content: space-between;
+  width: 11.625rem;
+  height: 3.5rem;
+  text-decoration: none;
+  display: flex;
+}
+
+
+.mobileNavBarWrapper {
+}
+
+.mdHide {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: none;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    display: flex;
+  }
+
+}
+
+.smHide {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: none;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    display: block;
+  }
+}
+
+.mobileMenuIcon {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: block;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    display: none;
+  }
+}
+
+.mobileMenuWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}

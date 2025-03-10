@@ -1,0 +1,77 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.ctaContentBtn{
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+        width: 100%;
+        padding-bottom: 72px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+        width: auto;
+        padding-bottom: 220px;
+    }
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+        padding-bottom: 220px;
+    }
+}
+
+.ctaContentBtnContent{
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+        height: auto;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+        //height: 200px;
+        height: auto;
+    }
+}
+
+.linkBlock{
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    border-radius: vars.$btn-radius;
+    background-color: vars.$pigment-green;
+    font-family: var(--font-secondary);
+    color: vars.$white;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    height: auto;
+    min-height: auto;
+    font-weight: 900;
+    text-decoration: none;
+    display: inline-block;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+        width: 100%;
+    }
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+        width: auto;
+    }
+}
+
+.btnContent{
+    display: flex;
+    gap: 8px;
+
+    justify-content: center;
+    align-items: center;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+        padding: 24px 48px;
+    }
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+        padding: 24px 48px;
+    }
+
+}
+
+.btnText{
+    font-family: var(--font-secondary);
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-align: center;
+
+
+}

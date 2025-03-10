@@ -1,0 +1,104 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.ctaBtnWrapper {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  background-color: vars.$pigment-green-dark;
+  text-align: center;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  display: flex;
+  margin-bottom: -1px;
+}
+
+.ctaBtnContent {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  display: flex;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-left: 428px;
+    padding-right: 428px;
+  }
+}
+
+
+.ctaBtnContentTitle {
+
+  font-family: var(--font-primary);
+  color: vars.$white;
+  font-weight: 800;
+  //line-height: 65.74px;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 56px;
+  }
+}
+
+.ctaBtnContentSubTitle {
+
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  font-weight: 500;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+}
+
+.ctaBtnPaddingWrapper {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 20px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+  }
+}
+
+.servicesCtaBannerBtn {
+  border-radius: vars.$btn-radius;
+  background-color: vars.$pigment-green;
+  text-decoration: none;
+
+  .btnContent {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    align-items: center;
+    padding: 24px 48px;
+    display: flex;
+  }
+
+  .btnText{
+    font-family: var(--font-secondary);
+    color: vars.$white;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24.2px;
+  }
+}

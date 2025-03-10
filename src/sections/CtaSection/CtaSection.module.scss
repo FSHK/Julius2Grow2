@@ -1,0 +1,107 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.wrapperCta {
+  background-color: vars.$green-light;
+  padding-top: 103px;
+  margin-bottom: -1px;
+  margin-top: -6px;
+}
+
+.wrapperCtaContent {
+  background-image: url(../../../public/images/img2.png), linear-gradient(90deg, #00000080 100%, #fff0), url(../../../public/images/man_pesting.png);
+  padding-bottom: 220px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    background-position: 73%;
+    background-size: auto 100%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    background-position: 50%;
+    background-size: cover, auto, cover;
+  }
+}
+
+.ctaContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding: 386px 16px 140px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 220px 48px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding: 220px 650px 220px 72px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding: 220px 180px;
+  }
+}
+
+.ctaContentText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ctaContentInfoTitle {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  color: vars.$jonquil;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 48px;
+    text-align: start;
+  }
+}
+
+.ctaContentInfoSubTitle {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  color: vars.$white;
+  letter-spacing: 0;
+  text-align: center;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+    line-height: 32px;
+    text-align: start;
+  }
+}
+
+.ctaContentBtn {
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+    padding-bottom: 72px;
+    font-size: 16px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: auto;
+    padding-bottom: 220px;
+    font-size: 20px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-bottom: 220px;
+  }
+}
+

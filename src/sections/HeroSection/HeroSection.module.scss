@@ -1,0 +1,187 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+
+/// Body
+
+.heroWrapper {
+  margin-bottom: -1px;
+}
+
+.heroGradient {
+  background-image: linear-gradient(90deg, #000000c9, #fff0);
+  height: auto;
+  min-height: 700px;
+  max-height: 1114px;
+}
+
+.navBarWazzaOption {
+  border-radius: vars.$btn-radius;
+  background-color: vars.$pigment-green;
+  flex: 0 auto;
+  align-content: center;
+  cursor: pointer;
+  justify-content: space-between;
+  width: 11.625rem;
+  height: 3.5rem;
+  text-decoration: none;
+  display: flex;
+}
+
+.wInlineBlock {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.contentHero {
+  display: flex;
+  flex-flow: column;
+  padding-top: 120px;
+  width: auto;
+
+  @include spacing.horizontal-spacing(padding-left, spacing.$horizontal-spacing);
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-right: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-right: 48px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-right: 585px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-right: 957px;
+    padding-bottom: 96px;
+  }
+}
+
+.contentHeroMiniTitle {
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  font-weight: 300;
+  //line-height: 29px;
+  line-height: 100%;
+}
+
+.contentHeroTitle {
+  color: vars.$jonquil;
+  font-weight: 800;
+  margin-top: 20px;
+  margin-bottom: 0.67rem;
+  //line-height: 75.14px;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 48px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 64px;
+  }
+}
+
+.contentHeroSubTitle {
+  font-family: var(--font-secondary);
+  color: vars.$white;
+
+  font-weight: 500;
+  //line-height: 28px;
+  line-height: 140%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+  }
+}
+
+.titles {
+  font-family: var(--font-primary);
+}
+
+.hero {
+  background-image: url(../../../public/images/landing-image.png);
+  background-position-y: 50%;
+  background-size: cover;
+  background-attachment: scroll;
+  height: auto;
+  min-height: 700px;
+  max-height: 1114px;
+  position: static;
+  overflow: visible;
+
+}
+
+.scheduleQuoteWrapper {
+  padding-top: 40px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-bottom: 308px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-bottom: 262px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-bottom: 0px;
+  }
+}
+
+.scheduleQuoteBtn {
+  border-radius: vars.$btn-radius;
+  background-color: vars.$pigment-green;
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  font-size: 24px; // TODO : Add responsiveness
+  font-weight: 900;
+  line-height: 32px;
+  text-decoration: none;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: auto;
+  }
+
+  .btnText {
+    border-radius: vars.$btn-radius;
+    background-color: vars.$pigment-green;
+    font-family: var(--font-secondary);
+    color: vars.$white;
+    font-size: 24px; // TODO : Add responsiveness
+    text-align: center;
+    padding: 24px 32px;
+    font-weight: 900;
+    line-height: 32px;
+  }
+}
+
+.resourceTermita {
+  padding-left: 0;
+  background-image: url(../../../public/images/termita.svg);
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: scroll;
+
+  line-height: 54px;
+  position: static;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    height: 105px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    height: 180px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    height: 315px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    height: 400px;
+    background-size: 170% 110%;
+  }
+}

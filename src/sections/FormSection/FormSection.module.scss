@@ -1,0 +1,381 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.sectionForm {
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  background-color: vars.$green-light;
+  text-align: center;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 120px;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+
+  }
+}
+
+.contenForm {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  align-items: center;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.formSectionTitle {
+  font-family: var(--font-primary);
+  color: vars.$pigment-green-dark;
+  text-align: center;
+  font-weight: 800;
+  line-height: 120%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 40px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 56px;
+  }
+
+}
+
+.formSectionSubTitle {
+  font-family: var(--font-secondary);
+  color: vars.$eerie-black;
+  font-size: 24px;
+  font-weight: 300;
+  //line-height: 28.8px;
+  line-height: 120%;
+}
+
+.smHide {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: none;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    display: inline;
+  }
+}
+
+/* Form Content Section */
+
+.sectionFormContent {
+  border-radius: vars.$galery-images-radius;
+  //background-color: vars.$white;
+  position: relative;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    flex-flow: column;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    margin-left: 368px;
+    margin-right: 368px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    margin-left: 608px;
+    margin-right: 608px;
+  }
+}
+
+.formBlock {
+  background-color: vars.$white;
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+.form {
+  z-index: 3;
+  border-radius: 8px;
+  position: relative;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 32px;
+  }
+
+}
+
+.formHeaderWrapper {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  text-align: left;
+  flex-flow: column;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.formTitle {
+  font-family: var(--font-primary);
+  color: vars.$pigment-green-dark;
+  font-weight: 800;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 24px;
+    //line-height: 31.2px;
+    line-height: 130%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 32px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 40px;
+  }
+}
+
+.formSubTitle {
+  font-family: var(--font-secondary);
+  color: vars.$eerie-black;
+  font-weight: 500;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    //line-height: 31.2px;
+    line-height: 120%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+  }
+}
+
+.inputForm {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  display: flex;
+}
+
+.groupInput {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  flex-flow: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.formInputLabel {
+  font-family: var(--font-secondary);
+  color: vars.$eerie-black;
+  flex: 0 auto;
+  font-weight: 500;
+  letter-spacing: 0;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.formFieldInput {
+  height: 66px;
+  font-family: var(--font-secondary);
+  color: vars.$form-place-holder-color;
+  background-color: #f3f3f300;
+  vertical-align: middle;
+  border: 1px solid #cccccc;
+  display: block;
+  width: 100%;
+  appearance: none;
+  border-radius: 32px;
+  margin-bottom: 0;
+  padding: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+  }
+}
+
+.groupRowInputWrapper {
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  display: flex;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    flex-flow: column;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    flex-flow: row;
+  }
+}
+
+.xlCol6 {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: 50%;
+  }
+}
+
+.placeholderText {
+  font-family: var(--font-secondary);
+  color: vars.$form-place-holder-color;
+  background-color: #f3f3f300;
+  vertical-align: middle;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 20px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+  }
+}
+
+.textAreaInput {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  color: #333333;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  height: 140px;
+}
+
+.formTc {
+  padding-top: 24px;
+}
+
+.wCheckbox {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  display: block;
+}
+
+.checkbox {
+  color: #11ff50;
+  border: 1px solid #54c9f4;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  padding-right: 0;
+  font-size: 20px;
+  line-height: 20;
+}
+
+.wCheckboxInput {
+  float: left;
+  margin: 4px 0 0 -20px;
+  line-height: normal;
+}
+
+.formTcDisclaimer {
+  font-family: var(--font-secondary);
+  text-align: left;
+  padding-left: 8px;
+  font-weight: 500;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+}
+
+.wFormLabel {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: normal;
+  margin-bottom: 0px;
+}
+
+.textLink {
+  color: vars.$pigment-green;
+  text-decoration: underline;
+}
+
+.hideCheckbox {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.actionsForm {
+  padding-top: 16px;
+}
+
+.submitBtn {
+  background-color: vars.$pigment-green;
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  border-radius: 40px;
+  width: 100%;
+  padding: 24px 0;
+  font-weight: 900;
+
+  line-height: 32px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 20px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+  }
+}
+
+.wBtn {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bottomImageSm{
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: block;
+    background-image: url(../../../public/images/formSection/Group_11.png);
+    background-position: 50%;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    padding-left: 0;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    display: none;
+  }
+}
+
+.bottomImageMd{
+  margin-bottom: -1px;
+}

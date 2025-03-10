@@ -1,0 +1,63 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.faqs {
+
+  @include spacing.horizontal-spacing(padding-left, spacing.$horizontal-spacing);
+
+  & {
+    @include spacing.horizontal-spacing(padding-right, spacing.$horizontal-spacing);
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-top: 96px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 140px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-top: 96px;
+  }
+}
+
+.regularFaqsBG {
+  background-color: vars.$pigment-green-dark;
+  padding-bottom: 200px;
+}
+
+.thanksPageFaqsBG {
+  background-color: vars.$pigment-green;
+  padding-bottom: 200px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-top: 96px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 140px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-top: 96px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-top: 48px;
+  }
+}
+
+.thankYouWrapper {
+  flex-flow: column;
+  justify-content: flex-end;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    margin-top: -35%;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    margin-top: -15%;
+    margin-bottom: -1px;
+  }
+
+  img {
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      width: auto;
+    }
+  }
+}

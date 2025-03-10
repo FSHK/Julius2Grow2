@@ -1,0 +1,472 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+/* Service Content */
+.wrapperService {
+  background-color: vars.$green-light;
+  padding: 96px 180px;
+  @include spacing.horizontal-spacing(padding-left, spacing.$horizontal-spacing);
+
+  & {
+    @include spacing.horizontal-spacing(padding-right, spacing.$horizontal-spacing);
+  }
+}
+
+.serviceContent {
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-left: 219px;
+    padding-right: 219px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-left: 288px;
+    padding-right: 288px;
+  }
+}
+
+.serviceTitle {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  color: vars.$pigment-green-dark;
+  text-align: center;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 48px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 56px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 64px;
+  }
+}
+
+/* Service Grid */
+
+.serviceGrid {
+  flex-flow: column;
+  padding-top: 56px;
+  display: flex;
+  gap: 16px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+}
+
+.serviceGridRow {
+  gap: 16px;
+  justify-content: space-between;
+  height: auto;
+  padding-top: 0;
+  display: flex;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    flex-flow: column;
+    height: auto;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    //height: 580px;
+    flex-flow: row;
+  }
+}
+
+.serviceCard1Wrapper {
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    height: 480px;
+    width: 100%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    height: 580px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 566px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    height: 640px;
+  }
+}
+
+.serviceCardImage {
+  border-radius: vars.$galery-images-radius;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  display: flex;
+  overflow: clip;
+}
+
+.serviceCard1 {
+  width: inherit;
+  background-image: url(../../../public/images/services/serviceCard1.jpeg);
+  background-position: 50%;
+  background-size: 150% 100%;
+}
+
+.serviceCard1BodyWrapper {
+  background-image: linear-gradient(360deg, #fff, #fff0);
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: auto;
+  height: 100%;
+  display: flex;
+}
+
+.serviceCard1Title {
+  font-family: var(--font-primary);
+  color: vars.$pigment-green-dark;
+  padding-bottom: 24px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 48px;
+  font-weight: 800;
+  //line-height: 56.35px;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding: 0 16px 16px;
+    font-size: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 0 32px 24px;
+    font-size: 48px;
+  }
+}
+
+.serviceCard1BodyText {
+  font-family: var(--font-secondary);
+  color: vars.$eerie-black;
+  font-weight: 500;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding: 0 16px 40px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 0 32px 40px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.serviceCard2Wrapper {
+  //width: 566px;
+  flex-grow: 1;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    height: 480px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    height: 580px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    height: 640px;
+  }
+}
+
+.serviceCard2 {
+  width: inherit;
+  background-image: url(../../../public/images/services/serviceCard2.svg);
+
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    background-position: 100%;
+    background-size: cover;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    background-position: 88% 100%;
+    background-size: 205% auto;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    background-position: 85% 70%;
+    background-size: 200% auto;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    background-position: 70%;
+    background-size: 150% 110%;
+  }
+}
+
+.serviceCard2BodyWrapper {
+  background-image: linear-gradient(90deg, #00000080, #fff0);
+  height: 100%;
+  padding-top: 40px;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    gap: 16px;
+    flex-flow: column;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    gap: 24px;
+    padding-right: 243px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-left: 32px;
+    padding-right: 325px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-right: 589px;
+  }
+}
+
+.serviceCard2Title {
+  font-family: var(--font-primary);
+  color: vars.$jonquil;
+  font-size: 56px;
+  font-weight: 800;
+  //line-height: 65.74px;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 56px;
+  }
+}
+
+.serviceCard2BodyText {
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  font-size: 24px;
+  font-weight: 500;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+
+.serviceBottomCardWrapper {
+  border-radius: vars.$galery-images-radius;
+  display: block;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    background-repeat: repeat-x;
+    height: 420px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    height: 420px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    height: 520px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    height: 580px;
+  }
+}
+
+.serviceCard3 {
+  border-radius: 1rem;
+  justify-content: start;
+  background-image: url(../../../public/images/services/serviceCard3.jpeg);
+  background-repeat: no-repeat;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    background-position: 40% 140%;
+    background-size: 125% 80%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    background-position: 50% -150%;
+    background-size: 100% 110%;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    background-position: 30% 130px;
+    background-size: 125% 77%;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    background-position: 32% 130px;
+    background-size: 135% auto;
+  }
+}
+
+.serviceBottomCardsTitle {
+  font-family: var(--font-primary);
+  color: vars.$white;
+  font-weight: 800;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 40px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 48px;
+  }
+}
+
+.serviceBottomCardsBodyText {
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  font-weight: 500;
+  font-size: 24px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.serviceCard3BodyWrapper {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    background-image: linear-gradient(180deg, vars.$pigment-green, vars.$pigment-green-20, rgba(0, 166, 80, 0) 50%);
+    padding: 32px 16px 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 32px 32px 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    background-image: linear-gradient(180deg, vars.$pigment-green, vars.$pigment-green-30, rgba(0, 166, 80, 0) 50%);
+    padding: 32px 32px 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding: 32px 32px 0;
+  }
+}
+
+.serviceCard4 {
+  justify-content: start;
+  background-image: url(../../../public/images/services/serviceCard4.png);
+  background-position: 50%;
+  background-size: 125% 100%;
+}
+
+.serviceCard4BodyWrapper {
+  background-image: linear-gradient(0deg, vars.$pigment-green, vars.$pigment-green-20, rgba(0, 166, 80, 0) 50%);
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+  gap: 16px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding: 0 16px 40px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 0 32px 40px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding: 0 32px 40px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding: 0 32px 40px;
+  }
+}
+
+
+.serviceCard5 {
+  display: flex;
+  justify-content: start;
+  background-color: vars.$pigment-green;
+  gap: 24px;
+  background-image: none;
+  flex-flow: column;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    height: auto;
+    padding: 40px 16px 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 40px 32px 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    height: 520px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    height: 580px;
+  }
+}
+
+
+.paymentsCardBodyText {
+  font-family: var(--font-secondary);
+  color: vars.$white;
+  font-weight: 500;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.paymentMethodsRow {
+  gap: 16px;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-bottom: 85px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-bottom: 60px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-bottom: 115px;
+  }
+}
+
+.lgShow {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: none;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    display: inline;
+  }
+}

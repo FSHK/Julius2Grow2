@@ -1,0 +1,243 @@
+@use '../../design-system/variables' as vars;
+@use '../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.wrapperInteraction {
+  background-color: vars.$green-light;
+  height: auto;
+}
+
+.interactionContent {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-top: 96px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-left: 440px;
+    padding-right: 440px;
+  }
+}
+
+.titles {
+  font-family: var(--font-primary);
+
+  .t1 {
+    color: vars.$pigment-green-dark;
+    text-align: center;
+    font-weight: 800;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      font-size: 24px;
+      line-height: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      font-size: 48px;
+      line-height: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      font-size: 56px;
+      line-height: 100%;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+      font-size: 60px;
+      line-height: 100%;
+    }
+  }
+
+  .t2 {
+    font-family: var(--font-secondary);
+    color: vars.$eerie-black;
+    text-align: center;
+    padding: 32px 280px 0px;
+
+    font-weight: 300;
+    //line-height: 33.89px;
+    line-height: 100%;
+
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+      padding: 32px 0 0;
+      font-size: 20px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+      padding: 32px 76px 0;
+      font-size: 28px;
+    }
+
+    @media (min-width: map.get(spacing.$breakpoints, large)) {
+      padding: 32px 280px 0;
+      font-size: 28px;
+    }
+  }
+}
+
+.list {
+  text-align: center;
+  margin-top: 16px;
+  gap: 8px;
+  flex-flow: column;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    margin-right: 0;
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    margin-left: 160px;
+    margin-right: 160px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.interactionTypeItem {
+  display: flex;
+
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    padding-right: 16px;
+    height: 100%;
+  }
+}
+
+.interactionTypeText {
+  font-family: var(--font-secondary);
+
+
+  font-weight: 500;
+  line-height: 24.2px;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    text-align: start;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .textSpan {
+    font-weight: 700;
+  }
+}
+
+.wrapperBtns {
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    flex-direction: column;
+    padding: 40px 0 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    flex-direction: row;
+    padding: 40px 262px 96px;
+  }
+
+
+  .btnPrimaryText {
+    font-family: var(--font-secondary);
+    color: vars.$white;
+    text-align: left;
+    flex: 0 auto;
+    padding-right: 0;
+    font-weight: 900;
+    line-height: 24px;
+    text-decoration: none;
+  }
+
+  .btnSecondaryText {
+    font-family: var(--font-secondary);
+    color: vars.$eerie-black;
+    text-align: left;
+    font-weight: 900;
+    line-height: 24px;
+  }
+
+  img {
+    padding-right: 8px;
+  }
+}
+
+.btnPrimaryActive {
+  border-radius: vars.$btn-primary-radius;
+  background-color: vars.$pigment-green;
+  justify-content: space-between;
+  min-width: 250px;
+  text-decoration: none;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+    font-size: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: auto;
+    font-size: 20px;
+  }
+}
+
+.btnPrimaryDefault {
+  border: 1px solid vars.$eerie-black;
+  border-radius: vars.$btn-primary-radius;
+  font-family: var(--font-secondary);
+  justify-content: space-between;
+  text-decoration: none;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+    font-size: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: auto;
+    font-size: 20px;
+  }
+}
+
+.interactionBtn {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  border-radius: vars.$btn-radius;
+  flex: 1;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding: 24px 0;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 34px 48px;
+  }
+
+}

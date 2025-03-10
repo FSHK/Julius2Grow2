@@ -1,0 +1,55 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.faqsWrapper {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    flex-flow: column;
+    display: flex;
+}
+
+.faqsTitle {
+    font-family: var(--font-primary);
+    color: vars.$white;
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: 800;
+    //line-height: 67.2px;
+    line-height: 120%;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+        font-size: 32px;
+    }
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+        font-size: 56px;
+    }
+    @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+        font-size: 72px;
+    }
+}
+
+.faqsContent {
+    flex-flow: column;
+    padding: 25px 24px;
+    display: flex;
+}
+
+.accordionFaq {
+    justify-content: space-between;
+    display: flex;
+}
+
+.accordionFaqText {
+    font-family: var(--font-secondary);
+    color: vars.$white;
+    font-weight: 500;
+    line-height: 120%;
+    @media (min-width: map.get(spacing.$breakpoints, small)) {
+        font-size: 20px;
+
+    }
+    @media (min-width: map.get(spacing.$breakpoints, medium)) {
+        font-size: 32px;
+    }
+
+}

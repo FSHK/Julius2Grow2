@@ -1,0 +1,296 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.wrapperImpact {
+  background-color: vars.$green-light;
+  padding-top: 0;
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-top: 130px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-top: 180px;
+  }
+}
+
+.contentImpact {
+  justify-content: flex-start;
+  padding-top: 96px;
+  display: flex;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    flex-flow: column;
+    padding-bottom: 40px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+
+    align-items: flex-start;
+    padding-bottom: 96px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    flex-flow: row;
+    padding-bottom: 0;
+  }
+
+}
+
+.contentImpactImage {
+  background-image: url(../../../public/images/contentImpact/contentImpactImage.png);
+  background-position: 50%;
+  background-size: cover;
+  border-top-right-radius: 369px;
+  border-bottom-right-radius: 369px;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+    height: 303px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: 710px;
+    height: 551px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 50%;
+    //width: 49.305%;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    height: 738px;
+    width: 50%;
+    //width: 952px;
+    //width: 49.583%;
+  }
+}
+
+.contentImpactImageChipWrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.contentImpactImageChip {
+  border-radius: 100%;
+  margin-top: -10%;
+  margin-left: 63.76%;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100px;
+    height: 100px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    width: 218px;
+    height: 218px;
+    margin-left: 0;
+    margin-right: -18px;
+    padding-left: 0;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.contentImpactWrapper {
+  height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-right: 72px;
+    padding-left: 82px;
+    width: 50%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-right: 256px;
+  }
+}
+
+.contentImpactBody {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding: 48px 16px 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    padding: 48px 0 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-top: 43.5px;
+    padding-bottom: 43.5px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-top: 43.5px;
+    padding-bottom: 43.5px;
+
+  }
+}
+
+.contentImpactBodyTitle {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  color: vars.$pigment-green-dark;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+    line-height: 100%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 56px;
+    line-height: 100%;
+  }
+}
+
+.contentImpactInfo {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  //line-height: 24.2px;
+  line-height: 100%;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-right: 55px;
+  }
+}
+
+.contentImpactInfoRow {
+  padding-top: 24px;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  flex-flow: column;
+  display: flex;
+}
+
+
+.contentImpactInfoImagesRow {
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
+  padding-bottom: 17px;
+  display: flex;
+  overflow: hidden;
+}
+
+.contentImpactInfoImage {
+  border-radius: 100%;
+  overflow: clip;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+
+  width: 141px;
+  height: 141px;
+}
+
+.contentImpactInfoEnd {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-bottom: 0;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-bottom: 43.5px;
+  }
+}
+
+
+.impact {
+  background-color: vars.$green-light;
+}
+
+.impactInfo {
+  padding-bottom: 96px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    padding-top: 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    padding-top: 96px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    padding-top: 134px;
+  }
+
+  & {
+    @include spacing.horizontal-spacing(padding-left, spacing.$horizontal-spacing);
+  }
+
+  & {
+    @include spacing.horizontal-spacing(padding-right, spacing.$horizontal-spacing);
+  }
+}
+
+.impactInfoRow {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  display: flex;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    flex-flow: column;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    flex-flow: row;
+  }
+
+}
+
+.impactInfoIndex {
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    width: 50%;
+  }
+}
+
+.impactInfoIndexTitle {
+  justify-content: space-between;
+  display: flex;
+  font-family: var(--font-primary);
+  color: vars.$pigment-green-dark;
+  font-weight: 800;
+  //line-height: 28.18px;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 20px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+  }
+}
+
+.impactInfoIndexBody {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  line-height: 24.2px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 20px;
+  }
+}

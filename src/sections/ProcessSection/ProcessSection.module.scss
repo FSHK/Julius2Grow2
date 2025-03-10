@@ -1,0 +1,197 @@
+@use './../../design-system/variables' as vars;
+@use './../../design-system/spacing' as spacing;
+@use "sass:map";
+
+.wrapperPhase {
+  background-color: vars.$green-light;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.phaseContent {
+  padding-bottom: 56px;
+  @include spacing.horizontal-spacing(padding-left, spacing.$horizontal-spacing);
+
+  & {
+    @include spacing.horizontal-spacing(padding-right, spacing.$horizontal-spacing);
+  }
+}
+
+.phaseContentTitleWrapper {
+  padding-left: 0;
+  padding-right: 0;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    margin-left: 253px;
+    margin-right: 253px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    margin-left: 385px;
+    margin-right: 385px;
+  }
+}
+
+.phaseContentTitle {
+  font-family: var(--font-primary);
+  color: vars.$pigment-green-dark;
+  text-align: center;
+  padding-bottom: 24px;
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 800;
+  //line-height: 75.14px;
+  line-height: 100%;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 32px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 48px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    font-size: 56px;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 64px;
+  }
+}
+
+.phaseContentBody {
+  margin-left: 0;
+  margin-right: 0;
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  letter-spacing: 0%;
+  text-align: center;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+
+.phaseCards {
+  gap: 16px;
+  //padding: 56px 180px 96px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: grid;
+    padding-left: 16px;
+    padding-right: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    display: grid;
+    flex-flow: wrap;
+    //justify-content: center;
+    //align-items: center;
+    padding-bottom: 0;
+    padding-left: 48px;
+    padding-right: 48px;
+    grid-template-columns: 1fr 1fr ;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    display: flex;
+    flex-flow: row;
+    padding: 56px 72px 96px;
+    //grid-template-columns: 1fr 0fr;
+  }
+}
+
+.cardPhase {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    width: 100%;
+  }
+
+}
+
+.cardPhaseBodyContent {
+  flex-flow: column;
+  justify-content: flex-end;
+  //margin-top: -10%;
+  display: flex;
+  position: relative;
+
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    margin-top: -8%;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    margin-top: -8.5%;
+  }
+}
+
+.phaseCardBodyTitle{
+  font-family: var(--font-primary);
+  color: vars.$pigment-green-dark;
+  font-weight: 800;
+  line-height: 100%;
+  padding-bottom: 24px;
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    font-size: 40px;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    font-size: 48px;
+  }
+}
+
+.phaseCardBodyText{
+  font-family: var(--font-secondary);
+  color: vars.$eerie-black;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+
+.xlMdShow {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: none;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    display: inline;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    display: none;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, xlarge)) {
+    display: inline;
+  }
+}
+
+.lgShow {
+  @media (min-width: map.get(spacing.$breakpoints, small)) {
+    display: none;
+  }
+
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    display: inline;
+  }
+}
+
+
+.mdShow {
+  display: none;
+  @media (min-width: map.get(spacing.$breakpoints, medium)) {
+    display: inline;
+  }
+  @media (min-width: map.get(spacing.$breakpoints, large)) {
+    display: none;
+  }
+}

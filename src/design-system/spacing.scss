@@ -1,0 +1,30 @@
+@use "sass:map";
+
+$breakpoints: (
+        small: 390px,
+        medium: 728px,
+        large: 1440px,
+        xlarge: 1920px,
+);
+
+// Using rem for responsive
+$horizontal-spacing: (
+        small: 1rem, // 16px
+        medium: 3rem, // 48px
+        large: 4.5rem, // 72px
+        xlarge: 11.25rem, // 180px
+);
+
+@mixin horizontal-spacing($property, $map) {
+  @each $breakpoint, $size in $map {
+    @if map.has-key($breakpoints, $breakpoint) {
+      @if $breakpoint == small {
+        #{$property}: $size;
+      } @else {
+        @media (min-width: map.get($breakpoints, $breakpoint)) {
+          #{$property}: $size;
+        }
+      }
+    }
+  }
+}
