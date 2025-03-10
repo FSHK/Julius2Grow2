@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import styles from "./FormSection.module.scss";
 import bottomImage from "./../../../public/images/formSection/Background_termitas_form.svg";
 import Image from "next/image";
+import {useRouter} from "next/navigation";
 
 interface FormData {
     name_field: string;
@@ -16,6 +17,8 @@ interface FormData {
 }
 
 const FormSection: React.FC = () => {
+    const router = useRouter();
+
     const [formData, setFormData] = useState<FormData>({
         name_field: "",
         email_field: "",
@@ -40,7 +43,7 @@ const FormSection: React.FC = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         console.log(formData);
-        // Add form submission logic here
+        router.push("/thank-you")
     };
 
     return (
@@ -147,16 +150,20 @@ const FormSection: React.FC = () => {
                                 </div>
                                 <div className={styles.formTc}>
                                     <label className={styles.wCheckbox}>
-                                        <div
-                                            className={`${styles.checkbox} ${styles.wCheckboxInput}`}></div>
-                                        <input
-                                            type="checkbox"
-                                            className={styles.hideCheckbox}
-                                            name="accepted_tc"
-                                            checked={formData.accepted_tc}
-                                            onChange={handleChange}
-                                            required
-                                        />
+                                        <div className={`${styles.checkbox} ${styles.wCheckboxInput}`}>
+                                            <input
+                                                type="checkbox"
+                                                id="customCheckbox"
+                                                className={styles.hideCheckbox}
+                                                name="accepted_tc"
+                                                checked={formData.accepted_tc}
+                                                onChange={handleChange}
+                                                required
+                                            />
+                                            <label htmlFor="customCheckbox" className={styles.customCheckbox}></label>
+                                        </div>
+
+
                                         <span className={`${styles.formTcDisclaimer} ${styles.wFormLabel} }`}>
                                             Acepto el&nbsp;<span
                                             className={styles.textLink}>Aviso de Privacidad</span> y <span
